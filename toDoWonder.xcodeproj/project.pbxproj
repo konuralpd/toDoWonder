@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0406B60A286BCFB0005DB531 /* toDoWonderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B609286BCFB0005DB531 /* toDoWonderApp.swift */; };
-		0406B60C286BCFB0005DB531 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B60B286BCFB0005DB531 /* ContentView.swift */; };
 		0406B60E286BCFB2005DB531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0406B60D286BCFB2005DB531 /* Assets.xcassets */; };
 		0406B611286BCFB2005DB531 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0406B610286BCFB2005DB531 /* Preview Assets.xcassets */; };
+		0406B619286BCFE3005DB531 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B618286BCFE3005DB531 /* ListView.swift */; };
+		0406B61B286BD247005DB531 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B61A286BD247005DB531 /* ListRowView.swift */; };
+		0406B61E286BD4BE005DB531 /* AddNewToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B61D286BD4BE005DB531 /* AddNewToDo.swift */; };
+		0406B621286BDDBD005DB531 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B620286BDDBD005DB531 /* ItemModel.swift */; };
+		0406B624286BE09A005DB531 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406B623286BE09A005DB531 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0406B606286BCFB0005DB531 /* toDoWonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoWonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0406B609286BCFB0005DB531 /* toDoWonderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoWonderApp.swift; sourceTree = "<group>"; };
-		0406B60B286BCFB0005DB531 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0406B60D286BCFB2005DB531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0406B610286BCFB2005DB531 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0406B618286BCFE3005DB531 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		0406B61A286BD247005DB531 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		0406B61D286BD4BE005DB531 /* AddNewToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDo.swift; sourceTree = "<group>"; };
+		0406B620286BDDBD005DB531 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		0406B623286BE09A005DB531 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,10 @@
 		0406B608286BCFB0005DB531 /* toDoWonder */ = {
 			isa = PBXGroup;
 			children = (
+				0406B622286BE088005DB531 /* ViewModels */,
+				0406B61F286BDDAC005DB531 /* Model */,
+				0406B617286BCFD4005DB531 /* Views */,
 				0406B609286BCFB0005DB531 /* toDoWonderApp.swift */,
-				0406B60B286BCFB0005DB531 /* ContentView.swift */,
 				0406B60D286BCFB2005DB531 /* Assets.xcassets */,
 				0406B60F286BCFB2005DB531 /* Preview Content */,
 			);
@@ -65,6 +75,32 @@
 				0406B610286BCFB2005DB531 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0406B617286BCFD4005DB531 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0406B618286BCFE3005DB531 /* ListView.swift */,
+				0406B61A286BD247005DB531 /* ListRowView.swift */,
+				0406B61D286BD4BE005DB531 /* AddNewToDo.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0406B61F286BDDAC005DB531 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0406B620286BDDBD005DB531 /* ItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0406B622286BE088005DB531 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0406B623286BE09A005DB531 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0406B60C286BCFB0005DB531 /* ContentView.swift in Sources */,
+				0406B621286BDDBD005DB531 /* ItemModel.swift in Sources */,
+				0406B61E286BD4BE005DB531 /* AddNewToDo.swift in Sources */,
+				0406B624286BE09A005DB531 /* ListViewModel.swift in Sources */,
 				0406B60A286BCFB0005DB531 /* toDoWonderApp.swift in Sources */,
+				0406B619286BCFE3005DB531 /* ListView.swift in Sources */,
+				0406B61B286BD247005DB531 /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

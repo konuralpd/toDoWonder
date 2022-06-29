@@ -9,9 +9,24 @@ import SwiftUI
 
 @main
 struct toDoWonderApp: App {
+    
+  @StateObject  var listViewMode: ListViewModel = ListViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            TabView {
+                NavigationView {
+                    ListView()
+                    }.tabItem {
+                        Label("Liste", image: "list")
+                        
+                }
+                AddNewToDo()
+                    .tabItem {
+                        Label("Oluştur", image: "add")
+                    }
+            }.environmentObject(listViewMode)
         }
     }
 }
